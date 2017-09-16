@@ -1,0 +1,21 @@
+{
+  "name": "lks7688-iot-gateway",
+  "version": "0.0.1",
+  "description": "LinkIt Smart 7688 as the IoT gateway device",
+  "keywords": [
+    "iot"
+  ],
+  "author": "jollen <jollen@jollen.org> (http://jollen.org/)",
+  "dependencies": {
+  },
+  "scripts": {
+  },
+  "devDependencies": {
+     "gulp": "^3.9.1",
+     "gulp-jshint": "^2.0.4",
+     "gulp-load-plugins": "^1.5.0",
+     "jshint": "^2.9.5",
+     "jshint-stylish": "^2.2.1"
+  },
+  "license": "MIT License"
+}
