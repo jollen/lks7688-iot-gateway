@@ -1,14 +1,17 @@
-'use strict';
+var Server = require('wotcity.io').Server;
 
-var m = require('mraa');                                         
-var ledState = true;   
-var myLed = new m.Gpio(44); 
- 
-myLed.dir(m.DIR_OUT);
- 
-function periodicActivity() {
-  myLed.write(ledState ? 1 : 0);
-  ledState = !ledState;        
-  setTimeout(periodicActivity, 1000);
-}                                         
-periodicActivity(); 
+var ondata = function(payload) {
+	var obj = JSON.parse(payload.data);
+	var paths = payload.pathname.split('/');
+	var deviceId = paths[2];
+
+	console.log('[', deviceId, ']', payload.data);
+};
+
+var onstart = function(payload) {
+}
+
+Server.WebsocketBroker.start({
+	onstart: onstart,
+	ondata: ondata
+});
