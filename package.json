@@ -7,7 +7,7 @@
   ],
   "author": "jollen <jollen@jollen.org> (http://jollen.org/)",
   "dependencies": {
-    "wotcity.io": "^0.9.3"
+    "wotcity.io": "^0.9.4"
   },
   "scripts": {},
   "devDependencies": {
